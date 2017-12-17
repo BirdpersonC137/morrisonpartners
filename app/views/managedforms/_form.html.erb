@@ -1,0 +1,33 @@
+<div class="container col-6">
+<%= simple_form_for(@managedform, local: true) do |form| %>
+  <% if managedform.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(managedform.errors.count, "error") %> prohibited this your form from being saved:</h2>
+
+      <ul>
+      <% managedform.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= form.input :full_name, id: :managedform_full_name %>
+    <%= form.input :phone, id: :managedform_phone %>
+    <%= form.input :email, id: :managedform_email %>
+    <%= form.input :withdrawals, id: :managedform_withdrawals %>
+    <%= form.input :experience, id: :managedform_experience %>
+    <%= form.input :risk, id: :managedform_risk %>
+    <%= form.input :assets, id: :managedform_assets %>
+    <%= form.input :income, id: :managedform_income %>
+    <%= form.input :wchance, id: :managedform_wchance %>
+  <div>
+    <br />
+      <%= recaptcha_tags %>
+    <br />
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

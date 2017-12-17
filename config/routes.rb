@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'subscription/index'
-
+  resources :managedforms
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+  get 'subscription/index'
+  get 'aboutus/index'  
   root 'home#index'
 end

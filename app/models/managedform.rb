@@ -1,0 +1,2 @@
+class Managedform < ApplicationRecord
+end
