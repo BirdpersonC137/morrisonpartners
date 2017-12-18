@@ -65,5 +65,6 @@ end
 gem 'pry' #pry gem itself
 gem 'pry-rails' #a gem that integrates pry with rails seemlessly
 gem 'hirb'
+gem 'active_admin_flat_skin'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
