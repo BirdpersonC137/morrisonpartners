@@ -4,6 +4,7 @@
     <%= favicon_link_tag asset_path('morrisonpartners.ico'), :rel => 'icon', :type =>  'image/png' %>
     <title>Morrison Partners</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "//www.google.com/jsapi" %>
@@ -21,7 +22,7 @@
     </div>
   </nav>
   <nav class="navbar navbar-expand-sm navbar-light bg-light navcolor d-flex justify-content-center" id="nav_bar">
-    <div class="d-flex justify-content-between col-sm-12 col-md-12 col-lg-8">
+    <div class="d-flex justify-content-between col-sm-12 col-md-12 col-lg-9 pl-5">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,7 +46,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="#">Contact Us</a>
-              <a class="dropdown-item" href="#">Request An Appointment</a>
+              <%= link_to 'Request an Appointment', new_appointment_path, class: "dropdown-item"  %>
               <%= link_to 'Managed Questionnaire', new_managedform_path, class: "dropdown-item" %>
               <a class="dropdown-item" href="#">Our Group Benefits Plan</a>
             </div>
