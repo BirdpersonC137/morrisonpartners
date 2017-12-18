@@ -62,6 +62,8 @@ group :development do
   gem 'hirb'
   gem 'letter_opener'
 end
-
+gem 'pry' #pry gem itself
+gem 'pry-rails' #a gem that integrates pry with rails seemlessly
+gem 'hirb'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
