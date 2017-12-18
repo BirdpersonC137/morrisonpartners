@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   get 'subscription/index'
   get 'aboutus/index'  
+  resources :home, only: [:index]
   root 'home#index'
 end
