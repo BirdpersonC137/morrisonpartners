@@ -1,5 +1,5 @@
 <div class="container col-sm-12 col-md-10 col-lg-6 mt-4">
-<h3>Investor Questionnaire </h3>
+<h4>Investor Questionnaire </h4>
 <%= simple_form_for(@managedform, local: true) do |form| %>
   <% if @managedform.errors.any? %>
     <div id="error_explanation">
@@ -12,45 +12,47 @@
     </div>
   <% end %>
     <div class="row d-flex justify-content-between">
-    <div class="col-4"><%= form.input :full_name, id: :managedform_full_name, label: "Full Name" %></div>
-    <div class="col-4"><%= form.input :phone, id: :managedform_phone, label: "Phone/Cell" %></div>
-    <div class="col-4"><%= form.input :email, id: :managedform_email, label: "E-Mail" %></div>
+    <div class="col-12"><%= form.input :full_name, id: :managedform_full_name, label: "Full Name" %></div>
     </div>
-    <h3>When do you anticipate you will need to start drawing on this money?</h3>
+    <div class="row d-flex justify-content-between">
+    <div class="col-6"><%= form.input :phone, id: :appointment_phone, label: "Phone/Cell" %></div>
+    <div class="col-6"><%= form.input :email, id: :appointment_email, label: "E-Mail" %></div>
+    </div>
+    <h4>When do you anticipate you will need to start drawing on this money?</h4>
     <div class="btn-group-lg d-flex flex-column" data-toggle="buttons">  
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :withdrawals, 'More than 10 years'%><%= form.label 'More than 10 years', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :withdrawals, '5 - 10 years' %> <%= form.label '5-10 years', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :withdrawals, '3 - 4 years' %> <%= form.label '3-4 years', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :withdrawals, '1 - 2 years' %> <%= form.label '1-2 years', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :withdrawals, 'Less than 1 year' %> <%= form.label 'Less than 1 year', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :withdrawals, 'More than 10 years'%><%= form.label 'More than 10 years', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :withdrawals, '5 - 10 years' %> <%= form.label '5-10 years', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :withdrawals, '3 - 4 years' %> <%= form.label '3-4 years', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :withdrawals, '1 - 2 years' %> <%= form.label '1-2 years', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :withdrawals, 'Less than 1 year' %> <%= form.label 'Less than 1 year', class: "pl-2" %></div>
     </div>
-    <h3>Which of the following would you say best reflects your current knowledge of, and experience with investing?</h3>
+    <h4>Which of the following would you say best reflects your current knowledge of, and experience with investing?</h4>
     <div class="btn-group-lg d-flex flex-column" data-toggle="buttons">  
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :experience, 'Sophisticated' %> <%= form.label 'Sophisticated', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :experience, 'Good' %> <%= form.label 'Good', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :experience, 'Average' %> <%= form.label 'Average', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :experience, 'Limited' %> <%= form.label 'Limited', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :experience, 'Very Low' %> <%= form.label 'Very Low', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :experience, 'Sophisticated' %> <%= form.label 'Sophisticated', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :experience, 'Good' %> <%= form.label 'Good', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :experience, 'Average' %> <%= form.label 'Average', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :experience, 'Limited' %> <%= form.label 'Limited', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :experience, 'Very Low' %> <%= form.label 'Very Low', class: "pl-2" %></div>
     </div>
-    <h3>Which would you say best describes your investment goals?</h3>
+    <h4>Which would you say best describes your investment goals?</h4>
     <div class="btn-group-lg d-flex flex-column" data-toggle="buttons">  
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :goals, 'Aggressive Growth' %> <%= form.label 'Aggressive Growth', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :goals, 'Growth' %> <%= form.label 'Growth', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :goals, 'Income & Growth' %> <%= form.label 'Income & Growth', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :goals, 'Short-Term Yield' %> <%= form.label 'Short-Term Yield', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :goals, 'Income' %> <%= form.label 'Income', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :goals, 'Security' %> <%= form.label 'Security', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :goals, 'Alpha' %> <%= form.label 'Alpha', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :goals, 'Aggressive Growth' %> <%= form.label 'Aggressive Growth', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :goals, 'Growth' %> <%= form.label 'Growth', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :goals, 'Income & Growth' %> <%= form.label 'Income & Growth', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :goals, 'Short-Term Yield' %> <%= form.label 'Short-Term Yield', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :goals, 'Income' %> <%= form.label 'Income', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :goals, 'Security' %> <%= form.label 'Security', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :goals, 'Alpha' %> <%= form.label 'Alpha', class: "pl-2" %></div>
     </div>
-    <h3>How would you describe your comfort level should the value of your investments decline in the short term?</h3>  
+    <h4>How would you describe your comfort level should the value of your investments decline in the short term?</h4>  
     <div class="btn-group-lg d-flex flex-column" data-toggle="buttons">    
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :risk, 'Very High' %> <%= form.label 'Very High', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :risk, 'High' %> <%= form.label 'High', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :risk, 'Moderate' %> <%= form.label 'Moderate', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :risk, 'Low' %> <%= form.label 'Low', class: "pl-2" %></div>
-    <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :risk, 'Very Low' %> <%= form.label 'Very Low', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :risk, 'Very High' %> <%= form.label 'Very High', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :risk, 'High' %> <%= form.label 'High', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :risk, 'Moderate' %> <%= form.label 'Moderate', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :risk, 'Low' %> <%= form.label 'Low', class: "pl-2" %></div>
+    <div class="btn btn-primary d-flex justify-content-start button-text"><%= form.radio_button :risk, 'Very Low' %> <%= form.label 'Very Low', class: "pl-2" %></div>
     </div>
-    <h3>Within what range would you estimate your net worth, excluding your principle residence?</h3>
+    <h4>Within what range would you estimate your net worth, excluding your principle residence?</h4>
     <div class="btn-group-lg d-flex flex-column" data-toggle="buttons">    
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :net_worth, 'Over $500K' %> <%= form.label 'Over $500K', class: "pl-2" %></div>
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :net_worth, '$200K - $500K' %> <%= form.label '$200K - $500K', class: "pl-2" %></div>
@@ -58,19 +60,19 @@
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :net_worth, 'Under $50K' %> <%= form.label 'Under $50K', class: "pl-2" %></div>
     </div>
     <div class="btn-group-lg d-flex flex-column" data-toggle="buttons">
-    <h3>What level of assets will your family be investing with us?</h3>
+    <h4>What level of assets will your family be investing with us?</h4>
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :family_assets, 'Less Than $1 Million' %> <%= form.label 'Less Than $1 Million', class: "pl-2" %></div>
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :family_assets, '$1 Million - $2 Million' %> <%= form.label '$1 Million - $2 Million', class: "pl-2" %></div>
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :family_assets, 'Greater Than $2 Million' %> <%= form.label 'Greater Than $2 Million', class: "pl-2" %></div>
     </div>
-    <h3>Within what range would you estimate your annual income?</h3>
+    <h4>Within what range would you estimate your annual income?</h4>
     <div class="btn-group-lg d-flex flex-column" data-toggle="buttons">
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :income, 'Over $150K' %> <%= form.label 'Over $150K', class: "pl-2" %></div>
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :income, '$75K - $150K' %> <%= form.label '$75K - $150K', class: "pl-2" %></div>
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :income, '$50K - $74.9K' %> <%= form.label '$50K - $74.9K', class: "pl-2" %></div>
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :income, 'Under $50K' %> <%= form.label 'Under $50K', class: "pl-2" %></div>
     </div>
-    <h3>What is the likelihood that you will need to draw on the money invested in this account before your expected investment time horizon?</h3>
+    <h4>What is the likelihood that you will need to draw on the money invested in this account before your expected investment time horizon?</h4>
     <div class="btn-group-lg d-flex flex-column" data-toggle="buttons">
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :wchance, 'Entirely Unlikely' %> <%= form.label 'Entirely Unlikely', class: "pl-2" %></div>
     <div class="btn btn-primary d-flex justify-content-start"><%= form.radio_button :wchance, 'Somewhat Likely' %> <%= form.label 'Somewhat Likely', class: "pl-2" %></div>
