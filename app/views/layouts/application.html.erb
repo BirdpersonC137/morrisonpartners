@@ -7,8 +7,7 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "//www.google.com/jsapi" %>
-    <script src="https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/js/bootstrap-material-design.js" integrity="sha384-3xciOSDAlaXneEmyOo0ME/2grfpqzhhTcM4cE32Ce9+8DW/04AGoTACzQpphYGYe" crossorigin="anonymous"></script>
-  </head>
+   </head>
 
   <body>
   <nav class="navbar navbar-light border-bottom-0 navcolor d-flex justify-content-center">
@@ -21,7 +20,7 @@
     </a>
     </div>
   </nav>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light navcolor d-flex justify-content-center">
+  <nav class="navbar navbar-expand-sm navbar-light bg-light navcolor d-flex justify-content-center" id="nav_bar">
     <div class="d-flex justify-content-between col-sm-12 col-md-12 col-lg-8">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -32,22 +31,23 @@
             <%= link_to 'Home', root_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Our Services</a>
+            <%= link_to 'About Us', aboutus_index_path , class: "nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Our Services', ourservices_index_path, class: "nav-link"%>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Market Outlook</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Group Benefit Plan</a>
-          </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Next Steps
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="#">Contact Us</a>
               <a class="dropdown-item" href="#">Request An Appointment</a>
-              <%= link_to 'Managed Questinnaire', new_managedform_path, class: "dropdown-item" %>
+              <%= link_to 'Managed Questionnaire', new_managedform_path, class: "dropdown-item" %>
+              <a class="dropdown-item" href="#">Our Group Benefits Plan</a>
             </div>
           </li>
         </ul>
@@ -56,10 +56,11 @@
   </nav>
     <div class="container-fluid">
       <%= yield %>
+      <%= yield :charts_js %> <!-- Rails -->
     </div>
       <footer id="myFooter">
         <div class="container pb-5">
-            <ul>
+            <ul class="pt-4">
                 <li><a href="#">Company Information</a></li>
                 <li><a href="#">Contact us</a></li>
                 <li><a href="#">Terms of service</a></li>

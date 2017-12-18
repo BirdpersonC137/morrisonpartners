@@ -12,7 +12,7 @@
     <div class="row mt-4">
         <div class="col-sm-12 col-md-8, col-lg-6">
             <div class="card">
-            <div class="card-body">
+            <div class="card-body homecard">
                 <h4 class="card-title">Your video goes here</h4>
                 <%= image_tag 'morrisonpartnerswireframevox.jpg', class:'col-12'%>
             </div>
@@ -20,10 +20,10 @@
         </div>
         <div class="col-sm-12 col-md-4, col-lg-6">
             <div class="card">
-            <div class="card-body">
+            <div class="card-body homecard">
                 <h4 class="card-title">“The most expensive thing you can own is a closed mind.”</h4>
                 <p class="card-text">Welcome existing clients and future clients. To find out more about my professional services, please refer to our services page. I look forward to helping you reduce the noise and to simplify the wealth management process.</p>
-                <div class="card-footer"><%= image_tag 'morrisonpartnersCIPF', class: "pr-2" %> <%= image_tag 'IIROC', class: "col-7" %><%= image_tag 'morrisonpartnersknowyouradvisor' %></div>
+                <div class="card-footer mt-5"><%= image_tag 'morrisonpartnersCIPF', class: "pr-2" %> <%= image_tag 'IIROC', class: "col-7" %><%= image_tag 'morrisonpartnersknowyouradvisor' %></div>
             </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="col-lg-8 col-md-12 col-sm-12">
-            <%= area_chart @investments, points: false %>
+            <%= area_chart @investments, points: false, legend: "top"%>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require jquery3
 //= require rails-ujs
-//= require Chart.bundle
+//= require highcharts
 //= require chartkick
 //= require chosen-jquery
 //= require popper

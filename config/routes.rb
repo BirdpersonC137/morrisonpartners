@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :appointments
+  get 'ourservices/index'
+
   resources :managedforms
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

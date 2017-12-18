@@ -15,9 +15,9 @@ class HomeController < ApplicationController
         @etfs = []
         @value = 25000
         (0..25).each do |years|
-           @value = (@value+1000) * 1.1125
+           @value = (@value+1000) * 1.1325
             @etfs<< [years,@value.round(2)]
         end 
-        @investments = [{name: 'Savings Account', data: @banks}, {name: 'Other Investment Managers', data: @etfs},{name: 'Morrison&Partners', data: @morrisonpartners}]           
+        @investments = [{name: 'Morrison&Partners', data: @morrisonpartners}, {name: 'Other Investment Managers', data: @etfs}, {name: 'Savings Account', data: @banks}]           
     end
 end
