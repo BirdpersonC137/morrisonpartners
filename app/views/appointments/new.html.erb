@@ -21,15 +21,20 @@
   <div class="row">
     <div class="col-12"><%= form.input :addtninfo, label: "Additional Information", input_html:{ rows:  5 } %></div>
   </div>
-  <div>
-      <div class="col-6"><%= form.input :date1, as: :datetime, label: "First Available Date" %></div>
-  </div>
-    <div>
-      <div class="col-6"><%= form.input :date2, as: :datetime, label: "Second Available Date" %></div>
-  </div>
-    <div>
-      <div class="col-6"><%= form.input :date3, as: :datetime, label: "Third Available Date" %></div>
-  </div>
+<div class="row">
+    <div class="col-4">
+        <div><h4>Date 1</h4></div>
+        <div><%= form.text_field :date1, label: "First Available Date", class: 'datetimepicker' %></div>
+    </div>
+    <div class="col-4">
+        <div><h4>Date 2</h4></div>
+        <div><%= form.text_field :date2, label: "First Available Date", class: 'datetimepicker' %></div>
+    </div>
+    <div class="col-4">
+      <div><h4>Date 3</h4></div>
+      <div><%= form.text_field :date3, label: "First Available Date", class: 'datetimepicker' %></div>
+    </div>
+</div>
   <div>
     <br />
     <div class="d-flex justify-content-center"><%= recaptcha_tags %></div>
