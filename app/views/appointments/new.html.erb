@@ -1,4 +1,4 @@
-<div class="container col-sm-12 col-md-8 col-lg-6">
+<div class="container col-sm-12 col-md-8 col-lg-7 mt-5 mb-5">
 <h4 class="pt-4">Request an Appointment</h4>
 <%= simple_form_for(@appointment, local: true) do |form| %>
 <% if @appointment.errors.any? %>
@@ -21,18 +21,18 @@
   <div class="row">
     <div class="col-12"><%= form.input :addtninfo, label: "Additional Information", input_html:{ rows:  5 } %></div>
   </div>
-<h4>Please specify 3 dates and time that work best for you:</h4>
-<div class="row">
-    <div class="col-4">
-        <div><h4>Date 1</h4></div>
+<h4>Please specify 3 dates and time that work best for you:</h>
+<div class="row pt-4">
+    <div class="col-md-12">
+        <div><h4>Preferred Date #1</h4></div>
         <div><%= form.text_field :date1, label: "First Available Date", class: 'datetimepicker' %></div>
     </div>
-    <div class="col-4">
-        <div><h4>Date 2</h4></div>
+    <div class="col-md-12">
+        <div><h4>Preferred Date #2</h4></div>
         <div><%= form.text_field :date2, label: "First Available Date", class: 'datetimepicker' %></div>
     </div>
-    <div class="col-4">
-      <div><h4>Date 3</h4></div>
+    <div class="col-md-12">
+      <div><h4>Preferred Date #3</h4></div>
       <div><%= form.text_field :date3, label: "First Available Date", class: 'datetimepicker' %></div>
     </div>
 </div>
@@ -41,8 +41,8 @@
     <div class="d-flex justify-content-center"><%= recaptcha_tags %></div>
     <br />
   </div>
-  <div class="actions">
-    <%= form.submit "Submit Profile", class: "btn btn-primary btn-raised col-12" %>
+  <div class="actions pb-5">
+    <%= form.submit "Request an appointment", class: "btn btn-primary btn-raised col-12" %>
   </div>
   <% end %>
 </div>

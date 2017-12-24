@@ -22,6 +22,12 @@
  @import url('https://unpkg.com/bootstrap-material-design@4.0.0-beta.4/dist/css/bootstrap-material-design.min.css');
  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons');
 
+ body{
+     background-color: #0D4F8B;
+ }
+ .container{
+     background-color: #FAFAFA;
+ }
 .header-jumbo-home{
     color: #E8EDE0;
     background-image: image-url("morrisonpartnerscalgary.jpg");
@@ -57,12 +63,14 @@ body {
     color: #a78019 !important;  
 }
 .nav-item > a:hover{
-    color: #004299 !important;  
+    background:  rgb(235, 234, 234) !important; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 #myFooter{
-    margin-top: 50px;
+    margin-top: 5px;
     background-color: #ffffff;
-    border-top: 1px grey solid
+    border-top: 1px rgb(179, 177, 177) solid
 }
 
 #myFooter .container{

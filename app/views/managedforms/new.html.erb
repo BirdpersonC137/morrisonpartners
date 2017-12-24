@@ -1,5 +1,5 @@
-<div class="container col-sm-12 col-md-10 col-lg-6 mt-4">
-<h4>Investor Questionnaire </h4>
+<div class="container col-sm-12 col-md-10 col-lg-6 mt-5">
+<h4 class="pt-3">Investor Questionnaire </h4>
 <%= simple_form_for(@managedform, local: true) do |form| %>
   <% if @managedform.errors.any? %>
     <div id="error_explanation">
@@ -84,7 +84,7 @@
     <br />
   </div>
   <div class="actions">
-    <%= form.submit "Submit Profile", class: "btn btn-primary btn-raised col-12" %>
+    <%= form.submit "Submit Questionnaire", class: "btn btn-primary btn-raised col-12 mb-5" %>
   </div>
 <% end %>
 </div>
