@@ -1,4 +1,4 @@
-<div class="container col-sm-12 col-md-10 col-lg-6 mt-5">
+<div class="container col-sm-12 col-md-8 col-lg-7 mt-5 mb-5">
 <h4 class="pt-3">Investor Questionnaire </h4>
 <%= simple_form_for(@managedform, local: true) do |form| %>
   <% if @managedform.errors.any? %>
@@ -6,7 +6,7 @@
       <h6><%= pluralize(@managedform.errors.count, "error") %> prohibited this your form from being saved:</h6>
       <ul>
         <% @managedform.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
+            <li class="alert alert-danger" role="alert"><%= message %></li>
         <% end %>
       </ul>
     </div>

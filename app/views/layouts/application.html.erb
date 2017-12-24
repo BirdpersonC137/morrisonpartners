@@ -21,7 +21,7 @@
     </a>
     </div>
   </nav>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light navcolor d-flex justify-content-center p-0" id="nav_bar">
+  <nav class="navbar navbar-expand-sm navbar-light navcolor d-flex justify-content-center p-0" id="nav_bar">
     <div class="d-flex justify-content-between col-sm-12 col-md-12 col-lg-11 pl-5">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -56,6 +56,23 @@
     </div>
   </nav>
     <div class="container-fluid p-0">
+      <% if flash[:notice].present? %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+
+      <% if flash[:alert].present? %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
       <%= yield %>
       <%= yield :charts_js %> <!-- Rails -->
     </div>

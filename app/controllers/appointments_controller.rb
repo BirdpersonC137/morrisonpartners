@@ -7,6 +7,7 @@ class AppointmentsController < ApplicationController
         if !verify_recaptcha(model: @appointment) || !@appointment.save
             render 'new'
         elsif @appointment.save
+            flash[:notice] = "Thank you for your interest, we will follow up with you shortly!"
             redirect_to root_path
         end
     end
